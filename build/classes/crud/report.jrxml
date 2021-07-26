@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="87594c4f-6d37-4e2b-abb0-3d84eff10dce">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     account.`id` AS account_id,
+     account.`surname` AS account_surname,
+     account.`given` AS account_given,
+     account.`gender` AS account_gender,
+     account.`picture` AS account_picture
+FROM
+     `account` account]]>
+	</queryString>
+	<field name="account_id" class="java.lang.Integer"/>
+	<field name="account_surname" class="java.lang.String"/>
+	<field name="account_given" class="java.lang.String"/>
+	<field name="account_gender" class="java.lang.String"/>
+	<field name="account_picture" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="263" height="33" forecolor="#000000" uuid="b88c28f3-00db-4843-9600-1fc72cec3b04"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[MarcoMan Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="39" width="200" height="22" forecolor="#000000" uuid="201bb8f8-5148-4138-a928-32f5fbf8ab1f"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Report Document]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="a2f2ca68-c432-4755-ab80-123000c60b39"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="82" height="15" uuid="5a9dfbcc-89cf-4d6d-99de-d5961239f6db"/>
+				<text><![CDATA[account_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="86" y="19" width="77" height="15" uuid="1686dd27-9cdd-4508-8c9a-381a0a9cff9a"/>
+				<text><![CDATA[account_surname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="163" y="19" width="85" height="15" uuid="f241f4a6-0b18-48b1-95f3-31d44ed40242"/>
+				<text><![CDATA[account_given]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="248" y="19" width="65" height="15" uuid="26ed7de3-1f7d-4a9f-8327-d89c5ec1c272"/>
+				<text><![CDATA[account_gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="322" y="19" width="231" height="15" uuid="ba7f506a-802c-4848-adc4-26c635f80bc1"/>
+				<text><![CDATA[account_picture]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="fcf6e2a2-cf7b-4ba0-a5c0-60330b0778c1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="82" height="15" uuid="36a17eb5-23fd-4905-91ac-ee881ec2198b"/>
+				<textFieldExpression><![CDATA[$F{account_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="86" y="0" width="77" height="15" uuid="17928d06-2a42-4e3a-b1c7-942630ec9b6d"/>
+				<textFieldExpression><![CDATA[$F{account_surname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="163" y="0" width="85" height="15" uuid="8f6995c1-13c3-4386-8a3e-9f436a897926"/>
+				<textFieldExpression><![CDATA[$F{account_given}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="248" y="0" width="65" height="15" uuid="0e4d3978-f5dd-4701-ab76-07c7ac59689b"/>
+				<textFieldExpression><![CDATA[$F{account_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="322" y="0" width="231" height="15" uuid="11d47b34-9ed8-4601-8f3c-2506029c20bd"/>
+				<textFieldExpression><![CDATA[$F{account_picture}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="837f9b8c-22e8-4e7f-b722-a22890826e27"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="8297235e-66b6-4ebe-b9bc-4fc65b6655e7"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="805ce44b-4295-427c-8080-01a43748ea8c"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ee74ea9b-057d-494f-a905-803ad382d962"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

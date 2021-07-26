@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 25, 2021, 12:06:21 AM
+    Author     : MarcoMan
+*/
+
+.textfield-design{
+    
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-border-color:linear-gradient(to bottom right, #3a4f93, #a43189);
+    -fx-border-radius:5px;
+    -fx-font-size:15px;
+    
+}
+
+.insert-image-button{
+    
+    -fx-background-color:transparent;
+    -fx-text-fill:#3a4f93;
+    -fx-cursor:hand;
+    -fx-font-size:15px;
+    
+}
+
+.insert-button{
+    
+    -fx-background-color:#333;
+    -fx-background-radius:20px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    
+}
+
+.insert-button:hover{
+    
+    -fx-background-color:#4677ba;
+    
+}
+
+.update-button{
+    
+    -fx-background-color:#333;
+    -fx-background-radius:20px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    
+}
+
+.update-button:hover{
+    
+    -fx-background-color:#34966c;
+    
+}
+
+.clear-button{
+    
+    -fx-background-color:#333;
+    -fx-background-radius:20px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    
+}
+
+.clear-button:hover{
+    
+    -fx-background-color:#b53a92;
+    
+}
+
+.delete-button{
+    
+    -fx-background-color:#333;
+    -fx-background-radius:20px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    
+}
+
+.delete-button:hover{
+    
+    -fx-background-color:#b83b4c;
+    
+}
+
+.print-button{
+    
+    -fx-background-color:#333;
+    -fx-background-radius:20px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    
+}
+
+.print-button:hover{
+    
+    -fx-background-color:#2e90cc;
+    
+}
